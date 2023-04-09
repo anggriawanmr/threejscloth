@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AnimatePressence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
 import config from '../config/config';
