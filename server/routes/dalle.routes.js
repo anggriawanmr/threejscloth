@@ -1,5 +1,5 @@
 import express from 'express';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import { Configuration, OpenAIApi } from 'openai';
 
 dotenv.config();
@@ -13,7 +13,7 @@ const config = new Configuration({
 const openai = new OpenAIApi(config);
 
 router.route('/').get((req, res) => {
-  res.status(200).json({ message: 'Hello from DALL E routes' });
+  res.status(200).json({ message: 'Hello from DALL.E ROUTES' });
 });
 
 router.route('/').post(async (req, res) => {
@@ -31,7 +31,7 @@ router.route('/').post(async (req, res) => {
 
     res.status(200).json({ photo: image });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: 'Something went wrong' });
   }
 });
